@@ -7,6 +7,13 @@
 
 OpenTide is the open source reference for starting and advanced Detection Engineering team looking to adopt Detection-as-Code, Threat & Detection Modelling, and modern DevOps workflows.
 
+#### Quick Start
+
+Get your private Tide repository on your Gitlab instance in a few steps
+
+##### Prepare your Gitlab instance
+You need to have a Gitlab instance, a registered Gitlab runner and the option to create a repository by URL (Settings > General > Import Sources > Repository by URL)
+
 #### Resources
 - [OpenTide Whitepaper](https://github.com/OpenTideHQ/.github/blob/main/profile/OpenTide%20White%20Paper.pdf)
 - [Introducing CoreTide FIRST TC Amsterdam 2024](https://www.first.org/resources/papers/amsterdam24/Benson-Housmann-Seguy-CoreTIDE-FIRST-TC-Amsterdam-2024.pdf)
