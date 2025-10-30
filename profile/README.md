@@ -9,10 +9,53 @@ OpenTide is the open source reference for starting and advanced Detection Engine
 
 #### Quick Start
 
-Get your private Tide repository on your Gitlab instance in a few steps
+Get your private **Tide** repository running on your **GitLab** instance in just a few steps.
 
-##### Prepare your Gitlab instance
-You need to have a Gitlab instance, a registered Gitlab runner and the option to create a repository by URL (Settings > General > Import Sources > Repository by URL)
+---
+
+##### 🧩 Prepare your GitLab instance
+
+Before starting, ensure you have:
+
+- A running **GitLab instance**  
+- A **registered GitLab Runner**  
+- The ability to **create a repository by URL**  
+  *(Settings → General → Import Sources → Repository by URL)*  
+
+Create a new group — for example, **OpenTIDE** — to host your repositories.
+
+---
+
+##### 📥 Import the GitHub template *InitTide*
+
+1. Go to **New Project → Import Project**
+   <img width="1260" height="66" alt="image" src="https://github.com/user-attachments/assets/49d3bd07-7d4a-436f-a60a-47d0f52c610b" />
+
+2. On [InitTide](https://github.com/OpenTideHQ/InitTide), copy the **repository clone URL**  
+   <img width="429" height="167" alt="image" src="https://github.com/user-attachments/assets/a8af2f93-941b-4e75-933e-17c3b64f43a7" />
+
+3. In GitLab, select **Repository by URL** and paste the information for your new project  
+   <img width="1292" height="938" alt="image" src="https://github.com/user-attachments/assets/1baa0422-829f-45c9-9aec-4894181b4db8" />
+
+4. Click **Create Project**.  
+   After a few seconds, you’ll see the full **Tide repository structure**:  
+   <img width="1282" height="902" alt="image" src="https://github.com/user-attachments/assets/6d5c0308-1d64-4e90-81dc-d9de5237c887" />
+
+5. *(Optional)* Delete all other branches and keep only `main`.
+
+---
+
+##### ⚙️ Initial Configuration
+
+1. If not already done, [add an SSH key](https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account) to your GitLab profile.  
+   *Git over SSH is the recommended method.*
+
+2. On the `main` branch, open the file **`.gitlab-ci.yml`** to review or adjust the CI/CD configuration.
+
+---
+
+> 💡 **Tip:** Once your repository is imported and configured, you’re ready to start building with Tide!
+
 
 #### Resources
 - [OpenTide Whitepaper](https://github.com/OpenTideHQ/.github/blob/main/profile/OpenTide%20White%20Paper.pdf)
