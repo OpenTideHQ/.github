@@ -35,11 +35,11 @@ Create a new group — for example, **OpenTIDE** — to host your repositories.
    <img width="429" height="167" alt="image" src="https://github.com/user-attachments/assets/a8af2f93-941b-4e75-933e-17c3b64f43a7" />
 
 3. In GitLab, select **Repository by URL** and paste the information for your new project  
-   <img width="1292" height="938" alt="image" src="https://github.com/user-attachments/assets/1baa0422-829f-45c9-9aec-4894181b4db8" />
+   <img width="646" height="469" alt="image" src="https://github.com/user-attachments/assets/1baa0422-829f-45c9-9aec-4894181b4db8" />
 
 4. Click **Create Project**.  
    After a few seconds, you’ll see the full **Tide repository structure**:  
-   <img width="1282" height="902" alt="image" src="https://github.com/user-attachments/assets/6d5c0308-1d64-4e90-81dc-d9de5237c887" />
+   <img width="641" height="451" alt="image" src="https://github.com/user-attachments/assets/6d5c0308-1d64-4e90-81dc-d9de5237c887" />
 
 5. *(Optional)* Delete all other branches and keep only `main`.
 
