@@ -28,7 +28,7 @@ Create a new group — for example, **OpenTIDE** — to host your repositories.
 
 ##### 📥 Import the GitHub template *InitTide*
 
-1. Go to **New Project → Import Project**
+1. Go to **New Project → Import Project**  
    <img width="1260" height="66" alt="image" src="https://github.com/user-attachments/assets/49d3bd07-7d4a-436f-a60a-47d0f52c610b" />
 
 2. On [InitTide](https://github.com/OpenTideHQ/InitTide), copy the **repository clone URL**  
@@ -54,7 +54,90 @@ Create a new group — for example, **OpenTIDE** — to host your repositories.
 
 ---
 
-> 💡 **Tip:** Once your repository is imported and configured, you’re ready to start building with Tide!
+##### 🔐 Configure SSH Keys for CI/CD
+
+Tide uses SSH for authentication and commit signing.  
+You’ll need to create and configure a dedicated key pair for your GitLab Runner.
+
+1. **Generate a key pair**  
+   ```bash
+   ssh-keygen -t ed25519 -C "tide-runner"
+   ```
+   This produces two files, typically:
+   - `id_ed25519` (private key)
+   - `id_ed25519.pub` (public key)
+
+2. **Add CI variables** to your GitLab project **Settings → CI/CD → Variables → CI/CD Variables → Add** 
+   - `TIDE_RUNNER_SSH_PRIVATE_KEY` → contents of the private key  
+   *(Visible, untick both flags `Protect variable` & `Expand variable reference`)*
+   - `TIDE_RUNNER_SSH_PUBLIC_KEY` → contents of the public key  
+     *(Visible, untick both flags `Protect variable` & `Expand variable reference`)*
+
+3. **Authorize the key pair**  
+   You have two options:
+   - **Deploy Token method**  
+     Add the private key under  
+     *Settings → Repository → Deploy Tokens*  
+     *(Repeat in the local CoreTIDE project if you’re using one.)*
+   - **Programmatic user method** 
+     - Create a dedicated GitLab user for automation.
+       * Recommended settings:
+           * Username: `gitlab-runner`
+           * Name: “OpenTide GitLab Runner”
+           * Email: `gitlab-runner@example.com (or internal)`
+           * Access level: **Regular user (not admin)**
+           * Optional: Disable sign-in with password if you’ll only use SSH.
+     - Add the **public** key under **User Settings → SSH Keys** 
+     - Grant the user access to your Tide project (and CoreTIDE if local).
+
+> 💡 These keys are also used for commit signing, ensuring pipeline commits are trusted and verifiable.
+
+---
+
+##### 🌐 Configure CoreTIDE Access
+
+**CoreTIDE** is the foundational framework Tide builds upon.  
+By default, it’s fetched dynamically from the **public repository**:
+
+```
+https://code.europa.eu/ec-digit-s2/opentide/coretide
+```
+
+Your GitLab Runner must have **network access** to this URL to fetch the latest version.
+
+If you’re in an **air-gapped environment** or developing custom extensions, you can host **CoreTIDE locally** in your instance instead.
+
+1. Clone or mirror the CoreTIDE repository:
+   ```bash
+   git clone git@github.com:OpenTideHQ/CoreTide.git
+   ```
+   or use GitLab’s [Repository Push Mirroring](https://docs.gitlab.com/ee/user/project/repository/mirror/push.html) to keep your local copy in sync with upstream.
+
+2. In `.gitlab-ci.yml`, adjust these variables:
+   ```yaml
+   TIDE_CORE_SETUP: LOCAL
+   TIDE_CORE_REPO: CoreTide
+   TIDE_CORE_ACCESS: $TIDE_CORE_LOCAL
+   ```
+
+3. Update the `include` section to reference your local repository path:
+   ```yaml
+   include:
+     - project: 'group/coretide'
+       ref: core
+       file: '/Pipelines/Gitlab/tide.yml'
+   ```
+
+> 💡 Use a **separate development branch** (not `core`) for internal modifications.  
+> This keeps your local CoreTIDE aligned with upstream while allowing safe customization.
+
+---
+
+##### ✅ Next Steps
+
+- Verify that your GitLab Runner can connect to your repository via SSH.  
+- Trigger a test pipeline to confirm CoreTIDE integration.  
+- You’re now ready to start building with **Tide**!
 
 
 #### Resources
