@@ -20,12 +20,15 @@ each merge for TVMs and DOMs and every commits for MDRs.
 
 ### Github quick-start for MyTIDE
 
+#### Minimum steps to be able to work with TVMs and DOMs
 Under OpenTideHQ project, we have prepared a template [InitTide](https://github.com/OpenTideHQ/InitTide).
  - Simply use this template to create a new repository on your Github space.
  - Provide the information and after a few seconds, the repository is created
  - You can now add OpenTide objects, either using objects available on ShareTide (TLP:CLEAR) or shared via MISP or you could create new objects using the templates available in the schema.
 
 > You can safely ignore the error messages under Action reported just after the creation of the repository. Since the first commit, the pipelines will start validating the YAML files against the schema.
+
+#### Additional configuration to deploy MDRs
 
 ### Self-managed Gitlab instance
 ##### 🧩 Prepare your GitLab instance
