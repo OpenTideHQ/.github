@@ -1,26 +1,33 @@
 <table align="center"><tr><td align="center" width="9999">
 <img src="https://github.com/user-attachments/assets/95afed09-0e3d-4cc6-8759-1ae5a42ed603" align="center" style="width:50%; height:auto;">
 
-## Open Threat Informed Detection Engineering
+## Open Threat-Informed Detection Engineering
 
 </td></tr></table>
 
-OpenTide is the open source reference for starting and advanced Detection Engineering team looking to adopt Detection-as-Code, Threat & Detection Modelling, and modern DevOps workflows.
+OpenTide is the open source reference for starting and advanced Detection Engineering teams looking to adopt Detection-as-Code, Threat & Detection Modelling, and modern DevOps workflows.
 
-### Quick Start
+### MyTIDE Quick Start 
 
-Get your private **Tide** repository running on your **Github** repository or **GitLab** instance in just a few steps.
+Get your private **Tide** repository running on your **Github** or **GitLab** repository in just a few steps.  
+
+The step-by-step instructions below refer to GitHub to help you to test quickly creating or importing models from [ShareTIDE]() and get hands-on on the framework. 
+
+Dedicated guidelines are also available for Gitlab here. The **main advantage of using Gitlab** is the documentation (markdown wiki pages) directly created and maintained by the pipelines on
+each merge for TVMs and DOMs and every commits for MDRs.
 
 ---
 
-#### Github quick-start
+### Github quick-start for MyTIDE
 
 Under OpenTideHQ project, we have prepared a template [InitTide](https://github.com/OpenTideHQ/InitTide).
  - Simply use this template to create a new repository on your Github space.
  - Provide the information and after a few seconds, the repository is created
  - You can now add OpenTide objects, either using objects available on ShareTide (TLP:CLEAR) or shared via MISP or you could create new objects using the templates available in the schema.
 
-#### Self-managed Gitlab instance
+> You can safely ignore the error messages under Action reported just after the creation of the repository. Since the first commit, the pipelines will start validating the YAML files against the schema.
+
+### Self-managed Gitlab instance
 ##### 🧩 Prepare your GitLab instance
 
 Before starting, ensure you have:
