@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.17 23.50" role="img">
+  <rect x="0.75" y="0.75" width="72.67" height="22.0" rx="11.0" fill="#ffffff" stroke="#001489" stroke-width="1.5"/>
+  <svg x="8.75" y="6.00" width="11.50" height="11.50" viewBox="0 -960 960 960"><path fill="#001489" d="M160-120v-80h480v80H160Zm226-194L160-540l84-86 228 226-86 86Zm254-254L414-796l86-84 226 226-86 86Zm184 408L302-682l56-56 522 522-56 56Z"/></svg>
+  <text x="26.25" y="11.75" fill="#001489" font-family="Inter" font-weight="600" font-size="8.8" letter-spacing="0.02em" dominant-baseline="central">EUPL 1.2</text>
+</svg>
