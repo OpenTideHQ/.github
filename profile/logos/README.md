@@ -2,7 +2,7 @@
 
 Official OpenTide logo assets — **Pantone Reflex Blue** (PMS Reflex Blue C · `#001489`).
 
-**Typography:** Inter SemiBold (600) · tracking −0.028em on wordmark  
+**Typography:** Inter SemiBold (600) — text outlined as paths in SVG (no font fallback)  
 **Icon:** Material Symbols Tsunami (official path)
 
 ## Layout

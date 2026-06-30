@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.17 23.50" role="img">
-  <rect x="0.75" y="0.75" width="72.67" height="22.0" rx="11.0" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.91 23.50" role="img">
+  <rect x="0.75" y="0.75" width="70.41" height="22.0" rx="11.0" fill="#ffffff"/>
   <svg x="8.75" y="6.00" width="11.50" height="11.50" viewBox="0 -960 960 960"><path fill="#ffffff" d="M160-120v-80h480v80H160Zm226-194L160-540l84-86 228 226-86 86Zm254-254L414-796l86-84 226 226-86 86Zm184 408L302-682l56-56 522 522-56 56Z"/></svg>
-  <text x="26.25" y="11.75" fill="#ffffff" font-family="Inter" font-weight="600" font-size="8.8" letter-spacing="0.02em" dominant-baseline="central">EUPL 1.2</text>
+  <path fill="#ffffff" transform="translate(26.2500,14.9512) scale(0.004297,-0.004297)" d="M150 0H1122V225H417V641H1066V863H417V1265H1118V1490H150Z"/>
+  <path fill="#ffffff" transform="translate(31.7541,14.9512) scale(0.004297,-0.004297)" d="M754 -22C1117 -22 1358 198 1358 517V1490H1091V539C1091 352 960 217 754 217C548 217 417 352 417 539V1490H150V517C150 198 389 -22 754 -22Z"/>
+  <path fill="#ffffff" transform="translate(38.4055,14.9512) scale(0.004297,-0.004297)" d="M150 0H417V504H703C1047 504 1232 711 1232 997C1232 1281 1050 1490 707 1490H150ZM417 724V1266H666C870 1266 959 1156 959 997C959 838 870 724 668 724Z"/>
+  <path fill="#ffffff" transform="translate(44.2577,14.9512) scale(0.004297,-0.004297)" d="M150 0H1075V225H417V1490H150Z"/>
+  <path fill="#ffffff" transform="translate(51.8027,14.9512) scale(0.004297,-0.004297)" d="M717 1490H421L94 1256V1002L442 1252H452V0H717Z"/>
+  <path fill="#ffffff" transform="translate(55.6998,14.9512) scale(0.004297,-0.004297)" d="M326 -17C416 -17 487 53 487 143C487 232 416 302 326 302C236 302 166 232 166 143C166 53 236 -17 326 -17Z"/>
+  <path fill="#ffffff" transform="translate(58.6816,14.9512) scale(0.004297,-0.004297)" d="M134 0H1153V223H504V234L763 498C1054 779 1131 913 1131 1078C1131 1327 929 1510 630 1510C335 1510 126 1326 126 1044H381C381 1197 477 1292 627 1292C768 1292 874 1205 874 1065C874 939 796 849 651 701L134 192Z"/>
 </svg>
